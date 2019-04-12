@@ -19,6 +19,24 @@ public class Stage1 {
 	}
 	
 	private static void stage1P1() {
+		Arrays.sort(iData);
+		int total = iData[0] + iData[iData.length - 1];
+		System.out.println(total);
+	}
+	
+	private static void stage1P2() {
+		String temp = sData[0];
+		System.out.println("Unchanged:\n" + Arrays.toString(sData));
+		for (int i = 0; i < sData.length - 1; i++) {
+			sData[i] = sData[i + 1];
+		}
+		sData[sData.length-1] = temp;
+		System.out.println("Changed:\n" + Arrays.toString(sData));	
+	}
+	/**
+	 * Attempt #1
+	 *
+	private static void stage1P1() {
 		int min = 100,
 			max = 0, 
 			total = 0;
@@ -48,7 +66,7 @@ public class Stage1 {
 		}
 		System.out.println(Arrays.toString(sData));
 	}
-
+*/
 	private static boolean stage1P3(int[][] arrayCheck) {
 		ArrayList<Integer> list = new ArrayList<>();
 		for (int i = 0; i < arrayCheck.length; i++) {
